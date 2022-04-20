@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6DAA0915-B05C-40C0-8710-CB9E7CE940C7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivityRight.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="City.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClassType.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeliverySlot.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="GetActivityRightsByRoleId_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetActivityRights_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllAreas_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllCategories_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllCities_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllCountries_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllLocations_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllRoles_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllStores_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllTypeCdDmt_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCategoriesByParentCategoryId_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetOrderDetailsReport_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetOrdersByAgentIdStoreId_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetOrdersByStoreId_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProductsByCategoryIds_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProductsByName_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProductsByOrderId_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProductsByUserCartId_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserInfoById_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserinfoByUserName_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserOrdersByUserId_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUsersByRoleIdStoreId_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUsersByRoleId_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUsersBySearch_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserStoresByUserId_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetVendorInfoById_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetVendorInfo_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Identity\ChangePassword.cs" />
+    <Compile Include="Identity\Client.cs" />
+    <Compile Include="Identity\RefreshToken.cs" />
+    <Compile Include="Identity\RegisterModel.cs" />
+    <Compile Include="Identity\ResetPassword.cs" />
+    <Compile Include="Identity\UserModel.cs" />
+    <Compile Include="Identity\VendorRequestModel.cs" />
+    <Compile Include="Location.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderProductXref.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersSummaryReport_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderStatusHistory.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductRepository.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Project.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestResponseModels.cs" />
+    <Compile Include="Response\DataResponse.cs" />
+    <Compile Include="Response\ListDataResponse.cs" />
+    <Compile Include="Response\ValidationItem.cs" />
+    <Compile Include="Response\ValueDataResponse.cs" />
+    <Compile Include="Role.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role1.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RupdarshiModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RupdarshiModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RupdarshiModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RupdarshiModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RupdarshiModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SplitString_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Store.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypeCdDmt.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserCart.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserCartProductXref.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserClaim.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateUser_Result.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VendorInfo.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VendorStatusHistory.cs">
+      <DependentUpon>RupdarshiModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="RupdarshiModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RupdarshiModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="RupdarshiModel.edmx.diagram">
+      <DependentUpon>RupdarshiModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RupdarshiModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RupdarshiModel.edmx</DependentUpon>
+      <LastGenOutput>RupdarshiModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="RupdarshiModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RupdarshiModel.edmx</DependentUpon>
+      <LastGenOutput>RupdarshiModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

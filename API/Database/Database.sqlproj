@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{35dee57d-9e49-47eb-bcc2-23b4489a6319}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Database</RootNamespace>
+    <AssemblyName>Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Schema" />
+    <Folder Include="DataFix" />
+    <Folder Include="StoredProcedures" />
+    <Folder Include="Functions" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Schema\Create_Role.sql" />
+    <None Include="DataFix\ActivityRight_DataFix.sql" />
+    <None Include="DataFix\Role_DataFix.sql" />
+    <None Include="Schema\Create_FileRepository.sql" />
+    <None Include="Schema\Create_UserInfo.sql" />
+    <None Include="Schema\Create_UserProjectXref.sql" />
+    <None Include="Schema\Create_ActivityRight.sql" />
+    <None Include="StoredProcedures\sp_AddUpdateRole.sql" />
+    <None Include="StoredProcedures\sp_AddUpdateUserInfo.sql" />
+    <None Include="StoredProcedures\sp_GetActivityRights.sql" />
+    <None Include="StoredProcedures\sp_GetActivityRightsByRoleId.sql" />
+    <None Include="StoredProcedures\sp_GetAllRoles.sql" />
+    <None Include="StoredProcedures\sp_GetUserInfoById.sql" />
+    <None Include="StoredProcedures\sp_GetUserinfoByUserName.sql" />
+    <None Include="StoredProcedures\sp_GetUsersByRoleId.sql" />
+    <None Include="StoredProcedures\sp_ValidateUser.sql" />
+    <None Include="Schema\Create_TimeSlot.sql" />
+    <None Include="DataFix\DeliverySlot_DataFix.sql" />
+    <None Include="DataFix\Category_DataFix.sql" />
+    <None Include="DataFix\Store_DataFix.sql" />
+    <None Include="StoredProcedures\sp_GetProductsByCategoryIds.sql" />
+    <None Include="StoredProcedures\sp_GetProductsByName.sql" />
+    <None Include="StoredProcedures\sp_GetProductsByOrderId.sql" />
+    <None Include="StoredProcedures\sp_AddUpdateProduct.sql" />
+    <None Include="StoredProcedures\sp_GetAllStores.sql" />
+    <None Include="StoredProcedures\sp_AddUpdateCustomerInfo.sql" />
+    <None Include="StoredProcedures\sp_GetProductsByUserCartId.sql" />
+    <None Include="StoredProcedures\sp_GetAllAreas.sql" />
+    <None Include="StoredProcedures\sp_UpdateOrderStatus.sql" />
+    <None Include="StoredProcedures\sp_AddUpdateCategory.sql" />
+    <None Include="StoredProcedures\sp_AssignOrdertoDeliveryAgent.sql" />
+    <None Include="StoredProcedures\sp_GetAllCategories.sql" />
+    <None Include="StoredProcedures\sp_GetCategoriesByParentCategoryId.sql" />
+    <None Include="StoredProcedures\sp_AddUpdateLocation.sql" />
+    <None Include="StoredProcedures\sp_AddUpdateCountry.sql" />
+    <None Include="StoredProcedures\sp_GetOrdersByStoreId.sql" />
+    <None Include="Schema\Create_Notification.sql" />
+    <None Include="StoredProcedures\sp_OrdersSummaryReport.sql" />
+    <None Include="StoredProcedures\sp_GetUsersBySearch.sql" />
+    <None Include="StoredProcedures\sp_GetUsersByRoleIdStoreId.sql" />
+    <None Include="StoredProcedures\sp_GetOrderDetailsReport.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataFix\ClassType_DataFix.sql" />
+    <None Include="DataFix\TypeCdDmt_DataFix.sql" />
+    <None Include="Functions\HierarchicalUser.sql" />
+    <None Include="Functions\SplitString.sql" />
+  </ItemGroup>
+</Project>

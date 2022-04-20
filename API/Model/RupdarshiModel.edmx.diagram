@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e413a76c281e469aa4c8498f6e8aaac1" Name="Diagram1">
+        <EntityTypeShape EntityType="RupdarshiModel.ActivityRight" Width="1.5" PointX="5.25" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.Category" Width="1.5" PointX="5.25" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.City" Width="1.5" PointX="7.5" PointY="32.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.ClassType" Width="1.5" PointX="5.25" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.Country" Width="1.5" PointX="5.25" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.DeliverySlot" Width="1.5" PointX="5.25" PointY="36.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.Location" Width="1.5" PointX="9.75" PointY="37.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.Notification" Width="1.5" PointX="12.75" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.Order" Width="1.5" PointX="12.75" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.OrderProductXref" Width="1.5" PointX="15" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.OrderStatusHistory" Width="1.5" PointX="18" PointY="37" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.Product" Width="1.5" PointX="5.25" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.ProductRepository" Width="1.5" PointX="7.5" PointY="37.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.Project" Width="1.5" PointX="5.25" PointY="45.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.Role" Width="1.5" PointX="0.75" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.Role1" Width="1.5" PointX="11.25" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.Store" Width="1.5" PointX="5.25" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.TypeCdDmt" Width="1.5" PointX="10.5" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.UserCart" Width="1.5" PointX="5.25" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.UserCartProductXref" Width="1.5" PointX="7.5" PointY="47.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.UserClaim" Width="1.5" PointX="15.75" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.UserInfo" Width="1.5" PointX="3" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.UserLogin" Width="1.5" PointX="15.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.User" Width="1.5" PointX="13.5" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.VendorInfo" Width="1.5" PointX="15.75" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RupdarshiModel.VendorStatusHistory" Width="1.5" PointX="18" PointY="33" IsExpanded="true" />
+        <AssociationConnector Association="RupdarshiModel.FK__ActivityR__Creat__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__ActivityR__Updat__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_Category_CreatedByUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_Category_UpdatedByUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__Location__CityId__7A672E12" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__UserInfo__City__46B27FE2" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_City_CountryId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_City_CreatedByUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_City_UpdatedByUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__ClassType__Creat__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__ClassType__Updat__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__TypeCdDmt__Class__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__UserInfo__Countr__45BE5BA9" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_Country_CreatedByUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_Country_UpdatedByUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__DeliveryS__Creat__787EE5A0" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__DeliveryS__Updat__797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__Location__Create__7B5B524B" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__Location__Update__7C4F7684" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__UserInfo__Locati__47A6A41B" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__Notificat__Creat__5D95E53A" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__Notificat__Notif__5BAD9CC8" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__Notificat__Order__58D1301D" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__Notificat__Updat__5E8A0973" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__Notificat__UserI__59C55456" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__OrderProd__Order__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_Order_CreatedByUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_Order_DeliveryAgentId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_Order_StatusTypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_Order_StoreId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_Order_UpdatedByUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_OrderStatusHistory_OrderId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__OrderProd__Produ__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_OrderStatusHistory_CreatedByUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_OrderStatusHistory_StatusTypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_OrderStatusHistory_UpdatedByUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__ProductRe__Produ__0C85DE4D" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__UserCartP__Produ__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_Product_CreatedByUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_Product_UpdatedByUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__ProductRe__Creat__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__ProductRe__Updat__0D7A0286" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__Project__Created__0E6E26BF" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__Project__Updated__0F624AF8" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__UserInfo__RoleId__1BC821DD" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__VendorInf__RoleI__2057CCD0" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_Store_CreatedByUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_Store_UpdatedByUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__TypeCdDmt__Creat__151B244E" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__TypeCdDmt__Updat__160F4887" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__VendorInf__Servi__214BF109" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__VendorInf__Statu__22401542" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__VendorSta__Statu__2EA5EC27" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__UserCartP__UserC__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_Country_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_dbo_UserClaims_dbo_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__UserInfo__Manage__1AD3FDA4" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__VendorInf__Creat__2334397B" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__VendorInf__Updat__24285DB4" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__VendorSta__Updat__2F9A1060" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK_dbo_UserLogins_dbo_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__VendorInf__UserI__1F63A897" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.FK__VendorSta__Vendo__2DB1C7EE" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.UserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.RoleActivityRightXref" ManuallyRouted="false" />
+        <AssociationConnector Association="RupdarshiModel.UserProjectXref" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

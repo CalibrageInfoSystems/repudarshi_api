@@ -1,0 +1,14 @@
+﻿--DeliverySlot
+IF OBJECT_ID ('DeliverySlot', 'U') IS NOT NULL
+    DROP TABLE DeliverySlot;
+GO	
+CREATE TABLE DeliverySlot(
+Id INT PRIMARY KEY IDENTITY(1,1),
+[DayName] NVARCHAR(50) NOT NULL,
+[Slot] NVARCHAR(100) NOT NULL,
+IsActive BIT DEFAULT 1 NOT NULL,
+CreatedByUserId INT FOREIGN KEY REFERENCES dbo.[UserInfo](Id) NOT NULL ,
+CreatedDate DATETIME NOT NULL,
+UpdatedByUserId INT FOREIGN KEY REFERENCES dbo.[UserInfo](Id) NOT NULL,
+UpdatedDate DATETIME NOT NULL  
+)
